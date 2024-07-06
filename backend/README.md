@@ -1,10 +1,6 @@
 # Manaos Odyssey API
 
-API REST do Manaos Odyssey.
-| Linguagens/Frameworks  | Banco de Dados/ORM |
-| ------------- | ------------- |
-| TypeScript  | PostgreSQL  |
-| NestJS  | TypeORM |
+API REST do Manaos Odyssey desenvolvida em TypeScript e NestJS. Para a base de dados, foi utilizado o PostgreSQL em conjunto ao TypeORM.
 
 ## Arquitetura e Recursos
 * <a href="https://www.macoratti.net/21/05/net_onion1.htm" target="_blank">Onion Architecture</a> e injeção de dependência, garantindo modularidade, testabilidade e desacoplamento;
@@ -31,7 +27,7 @@ API REST do Manaos Odyssey.
 
 * Baixe e instale o <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> caso não o tenha em sua máquina.
 
-* Deixe o Docker Desktop ativo e em segundo plano, certificando-se de que não há nenhum contêiner ou imagens em execução.
+* Deixe o Docker Desktop ativo e em segundo plano, certificando-se de que não há nenhum container ou imagens em execução.
 
 * Execute o seguinte comando:
   ```
