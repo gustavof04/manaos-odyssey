@@ -8,8 +8,8 @@ Execute o seguinte comando para instalar as dependências:
   npm install
   ```
 
-## Iniciando o front
-Execute o seguinte comando para iniciar o frontend:
+## Iniciando a aplicação
+Execute o seguinte comando para iniciar o Manaos Odyssey:
 ```bash
 npm run dev
 ```
