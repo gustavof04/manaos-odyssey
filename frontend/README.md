@@ -1,6 +1,6 @@
-# Manaos Odyssey
+# Manaos Odyssey Frontend
 
-Frontend desenvolvido em TypeScript e React, utilizando Vite como servidor de desenvolvimento local.
+Frontend para o Manaos Odyssey desenvolvido em TypeScript e React, utilizando Vite como servidor de desenvolvimento local.
 
 ## Instalação
 Execute o seguinte comando para instalar as dependências:
