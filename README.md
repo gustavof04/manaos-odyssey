@@ -6,6 +6,6 @@ Plataforma de turismo e cultura local de Manaus. O projeto nasceu com a ideia de
 
 ## Instalação
 
-Siga as instruções nos readmes dos diretórios do projeto:
+Siga as instruções nos **readmes** dos diretórios abaixo:
 * [API](https://github.com/gustavof04/manaos-odyssey/tree/main/backend)
 * [Frontend](https://github.com/gustavof04/manaos-odyssey/tree/main/frontend)
