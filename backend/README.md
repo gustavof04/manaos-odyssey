@@ -1,13 +1,15 @@
-# Manaos Odyssey
+# Manaos Odyssey API
 
-Plataforma de turismo e cultura local de Manaus. O projeto nasceu da ideia de facilitar a exploração do patrimônio cultural e natural rico que é a capital do Amazonas, tanto para turistas quanto para moradores curiosos que queiram mais sobre a cidade.
-
-> Status do Projeto: 🚧 (em desenvolvimento)
+API REST do Manaos Odyssey.
+| Linguagens/Frameworks  | Banco de Dados/ORM |
+| ------------- | ------------- |
+| TypeScript  | PostgreSQL  |
+| NestJS  | TypeORM |
 
 ## Arquitetura e Recursos
 * <a href="https://www.macoratti.net/21/05/net_onion1.htm" target="_blank">Onion Architecture</a> e injeção de dependência, garantindo modularidade, testabilidade e desacoplamento;
 * Docker para a containerização do banco de dados;
-* <code>class-validator</code> para as validações de DTOs;
+* class-validator para as validações de DTOs;
 * Helpers para padronizar status de requisições HTTP.
 
 ## Instalação
@@ -24,7 +26,7 @@ Plataforma de turismo e cultura local de Manaus. O projeto nasceu da ideia de fa
 
 * Execute o seguinte comando:
   ```bash
-  $ npm install
+  npm install
   ```
 
 * Baixe e instale o <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a> caso não o tenha em sua máquina.
@@ -36,7 +38,7 @@ Plataforma de turismo e cultura local de Manaus. O projeto nasceu da ideia de fa
   docker compose up --build
   ```
 
-## Executando a aplicação
+## Executando a API
 ```bash
 # development
 $ npm run start
