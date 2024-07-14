@@ -1,3 +1,4 @@
+import Container from "../../components/Container";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
@@ -5,7 +6,9 @@ const AboutPage = () => {
   return (
     <>
       <Header />
-      <h1>Sobre</h1>
+      <Container>
+        <h2>Sobre</h2>
+      </Container>
       <Footer />
     </>
   );

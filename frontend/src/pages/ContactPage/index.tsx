@@ -1,3 +1,4 @@
+import Container from "../../components/Container";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
@@ -5,7 +6,9 @@ const ContactPage = () => {
   return (
     <>
       <Header />
-      <h1>Contato</h1>
+      <Container>
+        <h2>Contato</h2>
+      </Container>
       <Footer />
     </>
   );
