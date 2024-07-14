@@ -8,10 +8,11 @@
   --primary: #466156;
   --secondary: #6A8973;
   --terciary: #A3B993;
-  --soft-white: #f1f1f1;
-  --white: #fefefe;
+  --soft-white: #F1F1F1;
+  --white: #FEFEFE;
   --black: #111;
   --gray: #222222;
+  --red: #CF1415;
 }
 
 * {
