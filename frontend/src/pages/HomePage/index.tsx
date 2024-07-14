@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <Header />
@@ -12,7 +13,9 @@ const Home = () => {
             <span>Manaos Odyssey</span> <br />
             Faça sua odisséia
           </p>
-          <button className="btn btn-secondary">Explorar Manaus</button>
+          <Link to="/attractions" className="btn btn-secondary">
+            Explorar Manaus
+          </Link>
         </div>
         <figure>
           <img className="img-home" src="/hiking.svg" alt="home img" />
@@ -23,4 +26,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

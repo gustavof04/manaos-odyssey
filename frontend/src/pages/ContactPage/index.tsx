@@ -1,14 +1,14 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
-const AboutPage = () => {
+const ContactPage = () => {
   return (
     <>
       <Header />
-      <h1>Sobre</h1>
+      <h1>Contato</h1>
       <Footer />
     </>
   );
 };
 
-export default AboutPage;
+export default ContactPage;
