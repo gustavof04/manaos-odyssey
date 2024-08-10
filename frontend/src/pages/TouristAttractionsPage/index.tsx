@@ -1,7 +1,7 @@
-import styles from "./AttractionsPage.module.css";
+import styles from "./TouristAttractionsPage.module.css";
 import Card from "../../components/Card";
 
-const AttractionsPage = () => {
+const TouristAttractionsPage = () => {
   return (
     <>
       <h2>Atrações Turísticas</h2>
@@ -21,4 +21,4 @@ const AttractionsPage = () => {
   );
 };
 
-export default AttractionsPage;
+export default TouristAttractionsPage;
