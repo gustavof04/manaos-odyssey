@@ -2,11 +2,14 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <section className="w-full min-h-screen flex items-center justify-around">
-      <div>
-        <p className="text-3xl font-bold mb-8 lg:text-5xl lg:font-bold lg:mb-4">
+    <section className="w-full min-h-screen flex justify-center items-center md:justify-around">
+      <div className="flex flex-col justify-center items-center lg:block">
+        <p className="text-3xl font-bold mb-8 text-center lg:text-5xl lg:font-bold lg:mb-12 lg:text-start">
           Bem-vindo ao <br />
-          <span className="text-secondary">Manaos Odyssey</span> <br />
+          <span className="text-center text-secondary">
+            Manaos Odyssey
+          </span>{" "}
+          <br />
           Faça sua odisséia
         </p>
         <Link
