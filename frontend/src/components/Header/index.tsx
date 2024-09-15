@@ -1,16 +1,84 @@
 import { Link } from "react-router-dom";
-import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <Link to="/">
-        <span>Manaos Odyssey</span>
-      </Link>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">Sobre</Link>
-        <Link to="/contact">Contatos</Link>
+    <header>
+      <nav className="bg-primary px-4 lg:px-6 py-2.5">
+        <div className="flex justify-between items-center mx-auto max-w-screen-xl">
+          <Link to="/">
+            <span className="self-center text-2xl font-bold whitespace-nowrap text-white">
+              Manaos Odyssey
+            </span>
+          </Link>
+
+          <div className="items-center lg:order-1 text-white">
+            {/* TODO: Find a way to implements hamburger menu logic */}
+            <button
+              data-collapse-toggle="mobile-menu-2"
+              type="button"
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden focus:outline-none"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                className="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
+          >
+            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:mt-0">
+              <li>
+                <Link
+                  className="no-underline pr-6 text-lg text-white lg:hover:text-secondary"
+                  to="/"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="no-underline pr-6 text-lg text-white lg:hover:text-secondary"
+                  to="/about"
+                >
+                  Sobre
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="no-underline pr-6 text-lg text-white lg:hover:text-secondary"
+                  to="/contact"
+                >
+                  Contatos
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
   );

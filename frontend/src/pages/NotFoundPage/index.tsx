@@ -1,14 +1,12 @@
-import styles from "./NotFoundPage.module.css";
-
 const NotFoundPage = () => {
   return (
-    <>
-      <h2 className={styles.errorTitle}>Algo deu errado!</h2>
-      <div className={styles.errorMessage}>
-        <span className={styles.errorCode}>404</span> <br />
-        <strong className={styles.notFoundText}>Página não encontrada!</strong>
-      </div>
-    </>
+    <div className="flex items-center justify-center flex-col m-auto">
+      <h2 className="text-xl mb-8 lg:text-2xl">Algo deu errado!</h2>
+      <span className="font-bold text-red text-9xl">404</span> <br />
+      <strong className="text-2xl text-red lg:text-3xl">
+        Página não encontrada!
+      </strong>
+    </div>
   );
 };
 
