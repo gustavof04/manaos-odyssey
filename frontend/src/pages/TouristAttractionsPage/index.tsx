@@ -25,7 +25,7 @@ const TouristAttractionsPage: React.FC = () => {
     <>
       <h2>Atrações Turísticas</h2>
 
-      <div className="grid grid-cols-[1fr_1fr_1fr] gap-12 m-7">
+      <div className="grid grid-cols-1 gap-12 m-7 md:grid-cols-2 lg:grid-cols-3">
         {attractions.map((attraction) => (
           <Card
             key={attraction.id}
