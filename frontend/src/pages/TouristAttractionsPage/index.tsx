@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from "react";
-import styles from "./TouristAttractionsPage.module.css";
 import Card from "../../components/Card";
 import { TouristAttractions } from "../../types/Types";
 import { getAttractions } from "../../service/touristAttractions/touristAttractions";
@@ -26,7 +25,7 @@ const TouristAttractionsPage: React.FC = () => {
     <>
       <h2>Atrações Turísticas</h2>
 
-      <div className={styles.attractionsGrid}>
+      <div className="grid grid-cols-[1fr_1fr_1fr] gap-12 m-7">
         {attractions.map((attraction) => (
           <Card
             key={attraction.id}
