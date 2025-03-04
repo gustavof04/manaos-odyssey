@@ -7,11 +7,11 @@ interface Props {
 
 const Card = ({ title, description }: Props) => {
   return (
-    <section className="w-[300px] h-[400px] bg-[color:var(--soft-white)] text-[color:var(--gray)] shadow-[5px_5px_10px_#22222270] flex flex-col items-center justify-between p-5 rounded-lg">
-      <h3 className="text-[color:var(--primary)]">{title}</h3>
-      <p className="text-[#555]">{description}</p>
-      <div className="w-full flex items-center justify-end">
-        <button className="w-10 h-10 bg-[color:var(--primary)] text-[color:var(--white)] text-2xl flex items-center justify-center cursor-pointer rounded-lg border-0 hover:bg-[color:var(--secondary)] hover:transition-all hover:duration-[0.5s]">
+    <section className="w-[300px] h-[500px] bg-[color:var(--soft-white)] text-[color:var(--gray)] shadow-lg flex flex-col items-center justify-between p-6 rounded-lg lg:transition-transform lg:transform lg:hover:scale-105">
+      <h3 className="text-[color:var(--primary)] text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-[#555] text-base mb-4">{description}</p>
+      <div className="w-full flex items-center justify-end mt-auto">
+        <button className="w-12 h-12 bg-[color:var(--primary)] text-[color:var(--white)] text-2xl flex items-center justify-center cursor-pointer rounded-full border-0 hover:bg-[color:var(--secondary)] transition-all duration-300">
           <ArrowRightAltIcon />
         </button>
       </div>
