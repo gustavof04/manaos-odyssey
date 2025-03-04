@@ -23,7 +23,7 @@ const TouristAttractionsPage: React.FC = () => {
 
   return (
     <>
-      <h2>Atrações Turísticas</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-4xl">Atrações Turísticas</h2>
 
       <div className="grid grid-cols-1 gap-12 m-7 md:grid-cols-2 lg:grid-cols-3">
         {attractions.map((attraction) => (
