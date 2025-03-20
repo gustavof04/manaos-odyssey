@@ -1,15 +1,15 @@
 # Manaos Odyssey Frontend
 
-Frontend para o Manaos Odyssey desenvolvido em TypeScript e React, utilizando <a href="https://vitejs.dev" target="_blank">Vite</a> como servidor de desenvolvimento local.
+Frontend for Manaos Odyssey developed in TypeScript and React, using <a href="https://vitejs.dev" target="_blank">Vite</a> as the local development server.
 
-## Instalação
-Execute o seguinte comando para instalar as dependências:
+## Installation
+Run the following command to install the dependencies:
   ```bash
   npm install
   ```
 
-## Iniciando a aplicação
-Execute o seguinte comando para iniciar o Manaos Odyssey:
+## Starting the application
+Run the following command to start Manaos Odyssey:
 ```bash
 npm run dev
 ```
