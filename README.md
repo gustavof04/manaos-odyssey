@@ -1,11 +1,11 @@
 # Manaos Odyssey
 
-Plataforma de turismo e cultura local de Manaus. O projeto nasceu com a ideia de facilitar a exploração do patrimônio cultural e natural rico que é a capital do Amazonas, tanto para turistas quanto para moradores curiosos que queiram saber mais sobre sua terra natal.
+A platform for tourism and local culture in Manaus. The project was born with the idea of facilitating the exploration of the rich cultural and natural heritage of the capital of Amazonas, both for tourists and curious residents who want to know more about their homeland.
 
-> Status do Projeto: 🚧 (em desenvolvimento)
+> Project Status: 🚧 (in development)
 
-## Instruções
+## Instructions
 
-Siga as instruções nos **readmes** dos diretórios abaixo:
+Follow the instructions in the readmes of the directories below:
 * [API](https://github.com/gustavof04/manaos-odyssey/tree/main/backend)
 * [Frontend](https://github.com/gustavof04/manaos-odyssey/tree/main/frontend)
