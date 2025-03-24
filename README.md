@@ -4,6 +4,9 @@ A platform for tourism and local culture in Manaus. The project was born with th
 
 > Project Status: 🚧 (in development)
 
+## Architecture
+![image](https://github.com/user-attachments/assets/204b0d93-e695-4db2-a50e-825ed14fbb2d)
+
 ## Instructions
 
 Follow the instructions in the readmes of the directories below:
