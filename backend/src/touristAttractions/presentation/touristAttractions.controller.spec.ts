@@ -45,6 +45,7 @@ describe('TouristAttractionsController', () => {
   });
 
   it('should get all attractions', async () => {
+    // Arrange
     const result = {
       isSuccess: true,
       content: [new Attractions()],
@@ -53,14 +54,17 @@ describe('TouristAttractionsController', () => {
     };
     jest.spyOn(mockFindAllAttractions, 'Execute').mockResolvedValue(result);
 
+    // Act
     const response = { status: jest.fn().mockReturnThis(), json: jest.fn() };
     await controller.GetAll(response as any);
 
+    // Assert
     expect(response.status).toHaveBeenCalledWith(200);
     expect(response.json).toHaveBeenCalledWith(result);
   });
 
   it('should get an attraction by id', async () => {
+    // Arrange
     const result = {
       isSuccess: true,
       content: new Attractions(),
@@ -69,14 +73,17 @@ describe('TouristAttractionsController', () => {
     };
     jest.spyOn(mockFindAttractionById, 'Execute').mockResolvedValue(result);
 
+    // Act
     const response = { status: jest.fn().mockReturnThis(), json: jest.fn() };
     await controller.GetById(response as any, 1);
 
+    // Assert
     expect(response.status).toHaveBeenCalledWith(200);
     expect(response.json).toHaveBeenCalledWith(result);
   });
 
   it('should create an attraction', async () => {
+    // Arrange
     const result = {
       isSuccess: true,
       content: new Attractions(),
@@ -85,14 +92,17 @@ describe('TouristAttractionsController', () => {
     };
     jest.spyOn(mockCreateAttraction, 'Execute').mockResolvedValue(result);
 
+    // Act
     const response = { status: jest.fn().mockReturnThis(), json: jest.fn() };
     await controller.Create(response as any, new Attractions());
 
+    // Assert
     expect(response.status).toHaveBeenCalledWith(201);
     expect(response.json).toHaveBeenCalledWith(result);
   });
 
   it('should update an attraction', async () => {
+    // Arrange
     const result = {
       isSuccess: true,
       content: new Attractions(),
@@ -111,9 +121,30 @@ describe('TouristAttractionsController', () => {
       updatedAt: new Date().toISOString(),
     };
 
+    // Act
     const response = { status: jest.fn().mockReturnThis(), json: jest.fn() };
     await controller.Update(response as any, 1, updateDto);
 
+    // Assert
+    expect(response.status).toHaveBeenCalledWith(200);
+    expect(response.json).toHaveBeenCalledWith(result);
+  });
+
+  it('should delete an attraction', async () => {
+    // Arrange
+    const result = {
+      isSuccess: true,
+      content: true,
+      message: '',
+      status: ResultStatus.OK,
+    };
+    jest.spyOn(mockDeleteAttraction, 'Execute').mockResolvedValue(result);
+
+    // Act
+    const response = { status: jest.fn().mockReturnThis(), json: jest.fn() };
+    await controller.Remove(response as any, 1);
+
+    // Assert
     expect(response.status).toHaveBeenCalledWith(200);
     expect(response.json).toHaveBeenCalledWith(result);
   });
