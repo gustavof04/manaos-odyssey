@@ -1,4 +1,4 @@
-import { HttpHelper } from 'shared/helpers/httpResponseHelper';
+import { HttpHelper } from '../../../shared/helpers/httpResponseHelper';
 import {
   Controller,
   Get,
