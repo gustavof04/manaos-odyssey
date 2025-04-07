@@ -42,4 +42,20 @@ describe('TouristAttractionsController', () => {
   it('should be defined', () => {
     expect(controller).toBeDefined();
   });
+
+  it('should get all attractions', async () => {
+    const result = {
+      isSuccess: true,
+      content: [new Attractions()],
+      message: '',
+      status: ResultStatus.OK,
+    };
+    jest.spyOn(mockFindAllAttractions, 'Execute').mockResolvedValue(result);
+
+    const response = { status: jest.fn().mockReturnThis(), json: jest.fn() };
+    await controller.GetAll(response as any);
+
+    expect(response.status).toHaveBeenCalledWith(200);
+    expect(response.json).toHaveBeenCalledWith(result);
+  });
 });
