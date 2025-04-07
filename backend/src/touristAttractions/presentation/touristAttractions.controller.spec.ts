@@ -74,4 +74,20 @@ describe('TouristAttractionsController', () => {
     expect(response.status).toHaveBeenCalledWith(200);
     expect(response.json).toHaveBeenCalledWith(result);
   });
+
+  it('should create an attraction', async () => {
+    const result = {
+      isSuccess: true,
+      content: new Attractions(),
+      message: '',
+      status: ResultStatus.CREATED,
+    };
+    jest.spyOn(mockCreateAttraction, 'Execute').mockResolvedValue(result);
+
+    const response = { status: jest.fn().mockReturnThis(), json: jest.fn() };
+    await controller.Create(response as any, new Attractions());
+
+    expect(response.status).toHaveBeenCalledWith(201);
+    expect(response.json).toHaveBeenCalledWith(result);
+  });
 });
