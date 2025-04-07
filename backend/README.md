@@ -44,3 +44,15 @@ $ npm run start
 # watch mode
 $ npm run start:debug
 ```
+
+## Unit Tests
+Manaos Odyssey API has unit tests. To run them, use the following command:
+```bash
+$ npm run test
+```
+You can see a CLI coverage of these tests running the following command:
+```bash
+$ npm test -- --coverage
+```
+> After running the command above, you can also see a generated HTML file containing the coverage in a more readable way. It is located on the following path: `backend\coverage\lcov-report\index.html`
+
