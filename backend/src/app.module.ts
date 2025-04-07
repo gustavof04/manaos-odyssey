@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UsersModule } from './users/users.module';
 import { TouristAttractionsModule } from './touristAttractions/touristAttractions.module';
 
 @Module({
@@ -18,7 +17,6 @@ import { TouristAttractionsModule } from './touristAttractions/touristAttraction
       logging: false,
       entities: [__dirname + '/**/*.entity{.js,.ts}'],
     }),
-    UsersModule,
     TouristAttractionsModule,
   ],
   controllers: [],
