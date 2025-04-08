@@ -28,7 +28,7 @@ describe('UpdateAttraction', () => {
     expect(updateAttraction).toBeDefined();
   });
 
-  it('should update a attraction successfully', async () => {
+  it('should update an attraction successfully', async () => {
     // Arrange
     const input = {
       name: 'Updated attraction',
@@ -70,7 +70,7 @@ describe('UpdateAttraction', () => {
     expect(result.status).toBe(ResultStatus.OK);
   });
 
-  it('should return error when trying to update a attraction with an existing name', async () => {
+  it('should return error when trying to update an attraction with an existing name', async () => {
     // Arrange
     const input = {
       name: 'Existing attraction name',
