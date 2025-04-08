@@ -23,11 +23,5 @@ export class UpdateAttractionDTO {
   @IsNumber({ maxDecimalPlaces: 2 })
   readonly averageRating?: number;
 
-  @ApiProperty()
-  readonly latitude?: string;
-
-  @ApiProperty()
-  readonly longitude?: string;
-
   readonly updatedAt?: string;
 }

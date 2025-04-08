@@ -39,7 +39,7 @@ export const Result = {
 
   InternalError<T = any>(content: T, message: string) {
     const result: ResultType<T> = {
-      isSuccess: true,
+      isSuccess: false,
       content,
       message,
       status: ResultStatus.INTERNAL_ERROR,
@@ -50,7 +50,7 @@ export const Result = {
 
   OperationalError<T = any>(content: T, message: string) {
     const result: ResultType<T> = {
-      isSuccess: true,
+      isSuccess: false,
       content,
       message,
       status: ResultStatus.OPERATIONAL_ERROR,
@@ -61,7 +61,7 @@ export const Result = {
 
   NotFound<T = any>(content: T, message: string) {
     const result: ResultType<T> = {
-      isSuccess: true,
+      isSuccess: false,
       content,
       message,
       status: ResultStatus.NOT_FOUND,
@@ -72,7 +72,7 @@ export const Result = {
 
   Unauthorized<T = any>(content: T, message: string) {
     const result: ResultType<T> = {
-      isSuccess: true,
+      isSuccess: false,
       content,
       message,
       status: ResultStatus.UNATUTHORIZED,

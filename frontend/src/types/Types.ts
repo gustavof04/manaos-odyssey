@@ -11,6 +11,4 @@ export type TouristAttractions = {
   description: string;
   location: string;
   averageRating: number;
-  latitude: number;
-  longitude: number;
 };
