@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Attractions } from '../../domain/entities/attractions.entity';
-import { Result, ResultType } from 'shared/helpers/result';
+import { Result, ResultType } from '../../../../shared/helpers/result';
 import { IDeleteAttraction } from '../../domain/useCases/IDeleteAttraction';
 
 @Injectable()
