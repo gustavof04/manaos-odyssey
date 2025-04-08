@@ -63,7 +63,7 @@ describe('CreateAttraction', () => {
     expect(result.status).toBe(ResultStatus.CREATED);
   });
 
-  it('should return error when trying to create an existing attraction', async () => {
+  it('should return error when trying to create a attraction with a existing name', async () => {
     // Arrange
     const input = {
       name: 'Existing attraction',
