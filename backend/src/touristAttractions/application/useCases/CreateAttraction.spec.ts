@@ -35,12 +35,10 @@ describe('CreateAttraction', () => {
       description: 'Description',
       location: 'Location',
       averageRating: 4.5,
-      latitude: 10.0,
-      longitude: 20.0,
     };
     const savedAttraction = {
-      ...input,
       id: 1,
+      ...input,
       createdAt: '2025-04-08T00:00:00Z',
       updatedAt: '2025-04-08T00:00:00Z',
     };
@@ -72,12 +70,10 @@ describe('CreateAttraction', () => {
       description: 'Description',
       location: 'Location',
       averageRating: 4.0,
-      latitude: 15.0,
-      longitude: 25.0,
     };
     const existingAttraction = {
-      ...input,
       id: 1,
+      ...input,
       createdAt: '2025-04-08T00:00:00Z',
       updatedAt: '2025-04-08T00:00:00Z',
     };
@@ -110,8 +106,6 @@ describe('CreateAttraction', () => {
       description: 'Description',
       location: 'Location',
       averageRating: 4.5,
-      latitude: 10.0,
-      longitude: 20.0,
     };
 
     jest

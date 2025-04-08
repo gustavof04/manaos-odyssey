@@ -29,24 +29,6 @@ export class Attractions {
   })
   averageRating: number;
 
-  @Column({
-    name: 'latitude',
-    type: 'decimal',
-    precision: 9,
-    scale: 6,
-    nullable: true,
-  })
-  latitude: number;
-
-  @Column({
-    name: 'longitude',
-    type: 'decimal',
-    precision: 9,
-    scale: 6,
-    nullable: true,
-  })
-  longitude: number;
-
   @CreateDateColumn({ name: 'created_at' })
   createdAt: string;
 

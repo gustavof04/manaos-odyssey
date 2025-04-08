@@ -116,8 +116,6 @@ describe('TouristAttractionsController', () => {
       description: 'A beautiful park',
       location: 'Center of the city',
       averageRating: 4.5,
-      latitude: '40.712776',
-      longitude: '-74.005974',
       updatedAt: new Date().toISOString(),
     };
 
