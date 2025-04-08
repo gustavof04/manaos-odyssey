@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Attractions } from '../../domain/entities/attractions.entity';
 import { UpdateAttractionDTO } from '../../domain/dtos/UpdateAttractionDTO';
-import { Result, ResultType } from 'shared/helpers/result';
+import { Result, ResultType } from '../../../../shared/helpers/result';
 import { IUpdateAttraction } from '../../domain/useCases/IUpdateAttraction';
 
 @Injectable()
