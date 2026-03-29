@@ -35,6 +35,12 @@ const getNearbyPlaces = async (attractionId: number) => {
     .then(({ data }) => data);
 };
 
+const getAttractionImage = async (attractionId: number) => {
+  return api
+    .get<ApiResponse>(`/attractionImage/${attractionId}`)
+    .then(({ data }) => data);
+};
+
 export {
   getAttractions,
   getAttractionsById,
@@ -42,4 +48,5 @@ export {
   editAttractions,
   deleteAttractions,
   getNearbyPlaces,
+  getAttractionImage,
 };

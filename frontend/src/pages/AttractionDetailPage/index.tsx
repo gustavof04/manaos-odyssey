@@ -8,6 +8,7 @@ import { TouristAttractions, NearbyPlace } from "../../types/Types";
 import {
   getAttractionsById,
   getNearbyPlaces,
+  getAttractionImage,
 } from "../../service/touristAttractions/touristAttractions";
 
 const AttractionDetailPage: React.FC = () => {
@@ -15,6 +16,7 @@ const AttractionDetailPage: React.FC = () => {
   const navigate = useNavigate();
   const [attraction, setAttraction] = useState<TouristAttractions | null>(null);
   const [nearbyPlaces, setNearbyPlaces] = useState<NearbyPlace[]>([]);
+  const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   const loadData = useCallback(async () => {
@@ -23,9 +25,10 @@ const AttractionDetailPage: React.FC = () => {
     try {
       const attractionId = Number(id);
 
-      const [attractionData, nearbyData] = await Promise.all([
+      const [attractionData, nearbyData, imageData] = await Promise.all([
         getAttractionsById({ id: attractionId } as TouristAttractions),
         getNearbyPlaces(attractionId),
+        getAttractionImage(attractionId),
       ]);
 
       if (attractionData?.isSuccess) {
@@ -34,6 +37,10 @@ const AttractionDetailPage: React.FC = () => {
 
       if (nearbyData?.isSuccess) {
         setNearbyPlaces(nearbyData.content || []);
+      }
+
+      if (imageData?.isSuccess) {
+        setImageUrl(imageData.content.imageUrl);
       }
     } catch (err: any) {
       console.error(err);
@@ -90,7 +97,15 @@ const AttractionDetailPage: React.FC = () => {
         Voltar para Atrações
       </button>
 
-      <div className="bg-[color:var(--soft-white)] rounded-lg shadow-lg p-8 mb-8">
+      <div className="bg-[color:var(--soft-white)] rounded-lg shadow-lg overflow-hidden mb-8">
+        {imageUrl && (
+          <img
+            src={imageUrl}
+            alt={attraction.name}
+            className="w-full h-[300px] object-cover"
+          />
+        )}
+        <div className="p-8">
         <h2 className="text-[color:var(--primary)] text-2xl md:text-3xl font-semibold mb-4">
           {attraction.name}
         </h2>
@@ -104,6 +119,7 @@ const AttractionDetailPage: React.FC = () => {
             <StarIcon fontSize="small" className="text-yellow-500" />
             <span>{Number(attraction.averageRating).toFixed(1)}</span>
           </div>
+        </div>
         </div>
       </div>
 

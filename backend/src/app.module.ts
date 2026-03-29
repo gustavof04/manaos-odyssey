@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TouristAttractionsModule } from './touristAttractions/touristAttractions.module';
 import { NearbyPlacesModule } from './nearbyPlaces/nearbyPlaces.module';
+import { AttractionImageModule } from './attractionImage/attractionImage.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { NearbyPlacesModule } from './nearbyPlaces/nearbyPlaces.module';
     }),
     TouristAttractionsModule,
     NearbyPlacesModule,
+    AttractionImageModule,
   ],
   controllers: [],
   providers: [],
