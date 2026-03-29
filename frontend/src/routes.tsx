@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import TouristAttractionsPage from "./pages/TouristAttractionsPage";
+import AttractionDetailPage from "./pages/AttractionDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import BasePage from "./pages/BasePage";
 
@@ -17,6 +18,10 @@ const AppRoutes = () => {
           <Route
             path="/attractions"
             element={<TouristAttractionsPage />}
+          ></Route>
+          <Route
+            path="/attractions/:id"
+            element={<AttractionDetailPage />}
           ></Route>
           <Route path="*" element={<NotFoundPage />}></Route>
         </Route>

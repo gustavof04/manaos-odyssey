@@ -29,8 +29,11 @@ const TouristAttractionsPage: React.FC = () => {
         {attractions.map((attraction) => (
           <Card
             key={attraction.id}
+            id={attraction.id!}
             title={attraction.name}
             description={attraction.description}
+            location={attraction.location}
+            averageRating={attraction.averageRating}
           />
         ))}
       </div>

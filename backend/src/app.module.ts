@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TouristAttractionsModule } from './touristAttractions/touristAttractions.module';
+import { NearbyPlacesModule } from './nearbyPlaces/nearbyPlaces.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { TouristAttractionsModule } from './touristAttractions/touristAttraction
       entities: [__dirname + '/**/*.entity{.js,.ts}'],
     }),
     TouristAttractionsModule,
+    NearbyPlacesModule,
   ],
   controllers: [],
   providers: [],

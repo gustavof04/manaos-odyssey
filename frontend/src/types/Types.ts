@@ -12,3 +12,11 @@ export type TouristAttractions = {
   location: string;
   averageRating: number;
 };
+
+export type NearbyPlace = {
+  xid: string;
+  name: string;
+  kinds: string;
+  lat: number;
+  lon: number;
+};

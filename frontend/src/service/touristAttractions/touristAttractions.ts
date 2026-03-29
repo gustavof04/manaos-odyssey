@@ -29,10 +29,17 @@ const deleteAttractions = async (attraction: TouristAttractions) => {
     .then(({ data }) => data);
 };
 
+const getNearbyPlaces = async (attractionId: number) => {
+  return api
+    .get<ApiResponse>(`/nearbyPlaces/${attractionId}`)
+    .then(({ data }) => data);
+};
+
 export {
   getAttractions,
   getAttractionsById,
   createAttractions,
   editAttractions,
   deleteAttractions,
+  getNearbyPlaces,
 };
